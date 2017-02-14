@@ -51,3 +51,21 @@ this module template code.
 We encourage you to share your code and experience - visit http://moodle.org
 
 Good luck!
+
+=============================================================================
+Mirroring a repository
+=============================================================================
+
+Open Terminal.
+
+Create a bare clone of the repository.
+
+git clone --bare https://github.com/exampleuser/old-repository.git
+Mirror-push to the new repository.
+
+cd old-repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+Remove the temporary local repository you created in step 1.
+
+cd ..
+rm -rf old-repository.git
